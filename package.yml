@@ -1,0 +1,14 @@
+package: cloud.lazycat.zpp.kikoeru
+version: 0.7.3
+name: Kikoeru
+description: "一个自托管的DLsite音声作品整理和媒体播放软件，为你提供极致的音声视听体验。"
+min_os_version: "1.5.0"
+homepage: https://github.com/vscodev/kikoeru
+author: vscodev
+locales:
+  zh:
+    name: Kikoeru
+    description: "一个自托管的DLsite音声作品整理和媒体播放软件，为你提供极致的音声视听体验。"
+  en:
+    name: Kikoeru
+    description: "A self-hosted DLsite audio works organizer and media player, delivering an ultimate audio-visual experience."

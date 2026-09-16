@@ -1,0 +1,22 @@
+application:
+  subdomain: kikoeru
+  background_task: true
+  multi_instance: false
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://kikoeru:2333/
+
+services:
+  kikoeru:
+    # upstream: vscodev/neokikoeru:latest
+    image: docker.1ms.run/vscodev/neokikoeru:latest@sha256:f478846bde40ae3315332b0397ad7fd75d371a89f5d1da51f07c48bc7e94fe18
+    environment:
+      - TZ=Asia/Shanghai
+      - PUID=0
+      - PGID=0
+      - UMASK=22
+      - KIKOERU_LOCALE=zh-CN
+    binds:
+      - /lzcapp/var/data:/opt/kikoeru/data/
